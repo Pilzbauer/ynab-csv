@@ -6,7 +6,7 @@ ynab_cols = ["Date", "Payee", "Memo", "Amount"];
 // Uses moment.js to parse and format the date into the correct format
 parseDate = function(val) {
   if (val && val.length > 0) {
-    return moment(val).format("YYYY-MM-DD");
+    return moment(val, 'DD.MM.YYYY').format("YYYY-MM-DD");
   }
 };
 
