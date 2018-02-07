@@ -61,11 +61,11 @@ window.DataObject = class DataObject {
             //   the rest are just returned as they are.
             switch (col) {
               case "Date":
-                tmp_row[col] = parseDate(cell);
+                tmp_row[col] = cell;//parseDate(cell);
                 break;
               case "Amount":
                 if (cell && cell.length > 0) {
-                  tmp_row[col] = accounting.parse(cell);
+                  tmp_row[col] = cell;//.replace('.','').replace(',','.');
                 } else {
                   tmp_row[col] = cell;
                 }
